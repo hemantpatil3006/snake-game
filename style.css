@@ -1,0 +1,98 @@
+#gameContainer {
+  width: 40vw;
+  height: 40vw;
+  background-color: #4ce71d;
+}
+
+.gameBoardPixel {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 8px;
+  float: left;
+}
+
+/* Add style to snake body pixels */
+.snakeBodyPixel {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+/* Add style to food pixels */
+.food {
+  background-color: #ff0000;
+  border-radius: 1px;
+}
+
+/* Add style to score board */
+#scoreContainer {
+  justify-content: space-around;
+}
+
+.scoreBoard {
+  width: 40vw;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  box-sizing: border-box;
+  border: 4px solid green;
+  display: inline-block;
+  padding: 1vw;
+  margin-top: 1vw;
+}
+
+/* Add style to on-screen controllers - Hidden By Default */
+#onScreenControllers {
+  display: none;
+}
+
+/* Add style to on-screen controllers - For mobile devices */
+@media only screen and (max-width: 768px) {
+  #gameContainer {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .gameBoardPixel {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  #scoreContainer {
+    width: 80vw;
+  }
+
+  .scoreBoard {
+    width: 80vw;
+    font-size: 30px;
+  }
+
+  #onScreenControllers {
+    width: 80vw;
+    margin: 5vw auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #onScreenControllers > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #onScreenControllers button {
+    background-color: transparent;
+    height: 20vw;
+    width: 20vw;
+    font-size: 10vw;
+    border: none;
+  }
+
+  #onScreenControllers button:focus {
+    outline: none;
+  }
+
+  #onScreenControllers button:active {
+    background-color: slategray;
+  }
+}
